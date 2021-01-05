@@ -1,0 +1,92 @@
+'''<h1>Sales Price Prediction Application</h1>
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>formDemo.html</title>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <p>Sales Price Prediction parameters</p>
+    <form>
+      <fieldset>
+        <legend>Enter Model Parameters</legend>
+        <p>
+          <label>&nbsp &nbsp &nbsp &nbsp KitchenAbvGr &nbsp &nbsp</label>
+          <input type = "number"
+                 id = "a"
+                 name = "KitchenAbvGr"
+                 value = %s />
+          <t></t>       
+          <label &nbsp;> &nbsp &nbsp &nbsp &nbsp House Price [ LinearRegression ] &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+          <input type = "number"
+                 id = "f"
+                 name = "SalesPrice"
+                 value = %s />		        
+        </p>
+        <p>
+          <label>&nbsp &nbsp &nbsp &nbsp OverallQual &nbsp &nbsp &nbsp &nbsp </label>
+          <input type = "number"
+                 id = "b"
+                 name = "OverallQual"
+                 value = %s />
+          <label &nbsp;> &nbsp &nbsp &nbsp &nbsp House [ GradientBoostingRegressor ] &nbsp &nbsp &nbsp</label>
+          <input type = "number"
+                 id = "f"
+                 name = "SalesPrice"
+                 value = %s />	
+        </p>
+        <p>
+          <label>&nbsp &nbsp &nbsp &nbsp Fireplaces &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+          <input type = "number"
+                 id = "c"
+                 name = "Fireplaces"
+                 value = %s />
+          <label &nbsp;> &nbsp &nbsp &nbsp &nbsp House Price [ Ridge ] &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp</label>
+          <input type = "number"
+                 id = "f"
+                 name = "SalesPrice"
+                 value = %s />	
+        <p>
+          <label>&nbsp &nbsp &nbsp &nbsp BedroomAbvGr &nbsp</label>
+          <input type = "number"
+                 id = "d"
+                 name = "BedroomAbvGr"
+                 value = %s />
+          <label &nbsp;> &nbsp &nbsp &nbsp &nbsp House Price [ RandomForestRegressor] &nbsp</label>
+          <input type = "number"
+                 id = "f"
+                 name = "SalesPrice"
+                 value = %s />	
+        </p>
+        <p>
+          <label>&nbsp &nbsp &nbsp &nbsp BsmtFullBath &nbsp &nbsp &nbsp</label>
+          <input type = "number"
+                 id = "e"
+                 name = "BsmtFullBath"
+                 value = %s />
+                 
+          <label &nbsp;> &nbsp &nbsp &nbsp &nbsp House Price [ DecisionTreeRegressor ] &nbsp</label>
+          <input type = "number"
+                 id = "f"
+                 name = "SalesPrice"
+                 value = %s />	
+                 
+          <label &nbsp;> &nbsp &nbsp &nbsp &nbsp House Price [ Lasso ] &nbsp</label>
+          <input type = "number"
+                 id = "f"
+                 name = "SalesPrice"
+                 value = %s />	
+        </p>
+        <p>
+          <label></label>
+        <script type="text/python">
+        def generateFullName():
+             return '/api/v1'      
+        </script>
+          <button type="submit" formmethod="POST" formaction="/api/v1/resources/books/data">Predict Price</button>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>''' %(KitchenAbvGr, round(result[0]), OverallQual, round(result1[0]), Fireplaces, round(result2[0]), BedroomAbvGr, round(result3[0]), BsmtFullBath, round(result4[0]), round(result5[0]))
+    #html1 = '''<label>&nbsp &nbsp &nbsp &nbsp BsmtFullBath   </label>'''

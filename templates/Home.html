@@ -1,0 +1,63 @@
+<h1>Sales Price Prediction Application</h1>
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>formDemo.html</title>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <p>Sales Price Prediction parameters</p>
+    <form>
+      <fieldset>
+        <legend>Enter Model Parameters</legend>
+        <p>
+          <label>KitchenAbvGr   </label>
+          <input type = "number"
+                 id = "a"
+                 name = "KitchenAbvGr"
+                 value = "" />
+		  <label>SalesPrice   </label>
+          <input type = "number"
+                 id = "f"
+                 name = "SalesPrice"
+                 value = "" />		 
+        </p>
+        <p>
+          <label>OverallQual    </label>
+          <input type = "number"
+                 id = "b"
+                 name = "OverallQual"
+                 value = "" />
+        </p>
+        <p>
+          <label>Fireplaces     </label>
+          <input type = "number"
+                 id = "c"
+                 name = "Fireplaces"
+                 value = "" />
+        <p>
+          <label>BedroomAbvGr   </label>
+          <input type = "number"
+                 id = "d"
+                 name = "BedroomAbvGr"
+                 value = "" />
+        </p>
+        <p>
+          <label>BsmtFullBath   </label>
+          <input type = "number"
+                 id = "e"
+                 name = "BsmtFullBath"
+                 value = "" />
+        </p>
+        <p>
+          <label></label>
+        <script type="text/python">
+        def generateFullName():
+             return '/api/v1'      
+        </script>
+          <button type="submit" formmethod="POST" formaction="/">Predict Price</button>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
